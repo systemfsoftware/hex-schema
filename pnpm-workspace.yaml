@@ -96,6 +96,9 @@ overrides:
   "@systemfsoftware/tsdown-config": file:.sfs-deps/tsdown-config-0.1.1.tgz
   "@systemfsoftware/vitest": file:.sfs-deps/vitest-3.0.0.tgz
   "@systemfsoftware/vitest-config": file:.sfs-deps/vitest-config-0.1.1.tgz
+  "@effect/platform-node": "catalog:"
+  "@effect/platform-node-shared": "catalog:"
+  "@effect/tsgo": "catalog:"
   fast-check: "catalog:"
   vite: "catalog:"
   # storybook's csf-plugin resolves esbuild 0.27 in its peer context while tsx
