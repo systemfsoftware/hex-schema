@@ -2,12 +2,14 @@
 
 ## Requirements
 
+- Linux, x86_64 or aarch64, with glibc: `flake.nix` declares only those two systems and
+  `pnpm-workspace.yaml`'s `supportedArchitectures` pins linux/glibc, so on macOS or Windows use a Linux VM or WSL
 - Nix with flakes
 - GNU coreutils: the setup command uses `cp -L --no-preserve=mode`
 - Node.js 24
 - pnpm (the version pinned in `package.json`'s `packageManager`)
 
-The dev shell (`nix develop`, or direnv) puts every tool on PATH, `bin/dprint` included; on a bare
+The dev shell (`nix develop`) puts every tool on PATH, `bin/dprint` included; on a bare
 shell that has nix the wrapper scripts resolve what they need themselves.
 
 ## Dependencies on core
