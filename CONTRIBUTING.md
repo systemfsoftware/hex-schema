@@ -37,8 +37,10 @@ pnpm format
 pnpm check:local
 ```
 
-`pnpm check:local` runs what the required CI checks run: dprint, build, lint, typecheck, type tests, API reports,
-attw and the tests. Run it before pushing.
+`pnpm check:local` reproduces the required CI static lane and tests: dprint, build, lint, typecheck, API reports,
+attw and the tests. Run it before pushing. Its `test:types` step runs only for packages that define a `test:types`
+script, and none do yet, so adding type tests means adding that script. It does not check commit messages; commitlint
+enforces those in the merge queue.
 
 ## Pull requests
 
