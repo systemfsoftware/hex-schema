@@ -9,11 +9,7 @@ Effect Schema definitions for hexadecimal wire formats, plus extra hex codecs: s
 
 ## Install
 
-```bash
-pnpm add @systemfsoftware/effect-schema-extensions @systemfsoftware/hex-schema
-```
-
-The npm registry lags this repository's sources: `@systemfsoftware/effect-schema-extensions` is 1.0.0 on npm and 1.0.3 here; `@systemfsoftware/hex-schema` is 2.0.0 on npm and 2.0.3 here. Each package's README describes its current source.
+https://nix.systemfsoftware.com is the package registry for `@systemfsoftware` packages: a producer pushes its package tarballs there from `main`, a consumer substitutes them through its flake inputs, and nothing is published to npm.
 
 ## Usage
 
