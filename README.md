@@ -17,30 +17,11 @@ S.decodeUnknownSync(Uint8ArrayFromPrefixedHex)('0x0aff') // Uint8Array(2) [ 10, 
 
 ## Install
 
-`@systemfsoftware` packages are not published to npm. They come from nix.systemfsoftware.com, the package registry for `@systemfsoftware` packages.
+```sh
+pnpm add @systemfsoftware/hex-schema effect
+```
 
-1. Add this repository as a flake input:
-
-   ```nix
-   inputs.hex-schema.url = "github:systemfsoftware/hex-schema";
-   ```
-
-2. Substitute from the cache. This repository's `flake.nix` sets the same keys:
-
-   ```nix
-   nixConfig = {
-     extra-substituters = "https://nix.systemfsoftware.com";
-     extra-trusted-public-keys = "nix-cache-1:wXA8I4DayNW9q6enUyQA/P/nT38pGSTLt374t3gsn7M=";
-   };
-   ```
-
-3. Take the package tarballs through the consumer route in [pnpm-release-management](https://github.com/systemfsoftware/pnpm-release-management). That repository provides `lib.mkProducerTarballs`, the call this repository's `flake.nix` makes for its own producers, and `lib.mkPnpmConsumerStore`.
-
-4. Install the peer from npm. You bring `effect` yourself:
-
-   ```bash
-   pnpm add effect@^4
-   ```
+`effect@^4` is a peer dependency: you bring your own.
 
 The repository publishes two packages. [`@systemfsoftware/hex-schema`](packages/hex-schema/README.md) holds the schemas. [`@systemfsoftware/effect-schema-extensions`](packages/effect-schema-extensions/README.md) re-exports everything in `@systemfsoftware/hex-schema`, from its root and from its `./hex-schema` subpath, so either one gives you the same names.
 

@@ -20,7 +20,7 @@ decode('0xdeadbeef') // branded HexString
 ## Install
 
 ```bash
-pnpm add @systemfsoftware/effect-schema-extensions
+pnpm add @systemfsoftware/effect-schema-extensions effect
 ```
 
 > [!NOTE]
