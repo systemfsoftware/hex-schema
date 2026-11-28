@@ -15,7 +15,7 @@ Extracted from `systemfsoftware/systemfsoftware` (core); package history came wi
 
 ## Dependencies on core
 
-`@systemfsoftware` packages come from npm like any other dependency: manifests name caret ranges and `pnpm-lock.yaml` holds the exact versions. Take newer ones with `pnpm update '@systemfsoftware/*'`. `flake.nix` pins core at a full commit (input `core`) only for its dprint build and its nixpkgs.
+`@systemfsoftware` packages come from npm like any other dependency: manifests name caret ranges and `pnpm-lock.yaml` holds the exact versions. Take newer ones with `pnpm update '@systemfsoftware/*'`. `flake.nix` pins core at a full commit (input `core`) only for its nixpkgs.
 
 Local setup:
 
