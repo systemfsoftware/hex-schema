@@ -8,12 +8,11 @@
 - Node.js 24
 - pnpm (the version pinned in `package.json`'s `packageManager`)
 
-The dev shell (`nix develop`) puts every tool on PATH, `bin/dprint` included; on a bare
-shell that has nix the wrapper scripts resolve what they need themselves.
+The dev shell (`nix develop`) puts every tool on PATH.
 
 ## Dependencies
 
-`@systemfsoftware` packages come from npm like any other dependency: manifests name caret ranges and `pnpm-lock.yaml` holds the exact versions. To take newer ones, run `pnpm update '@systemfsoftware/*'`. `flake.nix` pins core at a full commit (input `core`) only for its dprint build and its nixpkgs.
+`@systemfsoftware` packages come from npm like any other dependency: manifests name caret ranges and `pnpm-lock.yaml` holds the exact versions. To take newer ones, run `pnpm update '@systemfsoftware/*'`. `flake.nix` pins core at a full commit (input `core`) only for its nixpkgs.
 
 ## Setup and workflow
 
